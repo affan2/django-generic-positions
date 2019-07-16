@@ -50,7 +50,7 @@ def position_result_list(change_list):
     """
     result = result_list(change_list)
     # Remove sortable attributes
-    for x in range(0, len(result['result_headers'])):
+    for x in list(range(0, len(result['result_headers']))):
         result['result_headers'][x]['sorted'] = False
         if result['result_headers'][x]['sortable']:
             result['result_headers'][x]['class_attrib'] = mark_safe(
@@ -68,7 +68,7 @@ def position_result_list(change_list):
         'url_toggle': '?o=-1',
     })
     # Append the editable field to every result item
-    for x in range(0, len(result['results'])):
+    for x in list(range(0, len(result['results']))):
         obj = change_list.result_list[x]
         # Get position object
         c_type = ContentType.objects.get_for_model(obj)
