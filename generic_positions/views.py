@@ -7,7 +7,7 @@ from .models import save_positions
 
 class PositionBulkUpdateView(View):
     """View to update position objects with a POST dictionary."""
-    http_method_names = [u'post', ]
+    http_method_names = ['post', ]
 
     def post(self, request, *args, **kwargs):
         if request.is_ajax():
