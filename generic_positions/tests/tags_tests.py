@@ -30,7 +30,7 @@ class PositionResultListTestCase(TestCase):
             list_display_links=None, list_filter=None, date_hierarchy=None,
             search_fields=None, list_select_related=None, list_per_page=100,
             list_max_show_all=10, list_editable=None,
-            model_admin=GenericPositionsAdmin(DummyModel, AdminSite()))
+            model_admin=GenericPositionsAdmin(DummyModel, AdminSite()), sortable_by=None, )
         change_list.formset = None
         c = Context({'cl': change_list})
         self.assertIn('name="position-{0}"'.format(self.first_model.id),
