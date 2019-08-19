@@ -11,7 +11,7 @@ class DummyParentModel(models.Model):
         'fields_positions.ObjectPosition'
     )
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
 
@@ -20,7 +20,7 @@ class DummyModel(models.Model):
     name = models.CharField(max_length=256, blank=True)
     parent = models.ForeignKey(DummyParentModel, on_delete=models.CASCADE)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
 
