@@ -42,7 +42,7 @@ Add this to your main ``urls.py``::
 
     urlpatterns = patterns(
         '',
-        url(r'^pos/', include('generic_positions.urls')),
+        re_path(r'^pos/', include('generic_positions.urls')),
         ...
     )
 
